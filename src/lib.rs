@@ -143,8 +143,8 @@ fn custom_word_separator(line: &str) -> Box<dyn Iterator<Item = Word<'_>> + '_> 
 
         // Advance to next (non-empty) split
         loop {
-            if let Some((next_section, needs_break)) = isolate_iter.next() {
-                if needs_break {
+            if let Some((next_section, is_tag)) = isolate_iter.next() {
+                if !is_tag {
                     let mut iter = UnicodeBreakProperties.find_words(next_section);
                     let break_res = iter.next();
                     if break_res.is_some() {
