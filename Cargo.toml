@@ -1,7 +1,7 @@
 [package]
 name = "hachimi_lib"
 description = "Common Hachimi components library"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 repository = "https://github.com/Hachimi-Hachimi/hachimi_lib"
 license = "MIT"
